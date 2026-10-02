@@ -12,7 +12,7 @@ from src.validate import validate_placements
 from src.load import load_placements
 
 if __name__ == "__main__":
-    raw = extract_placements()
+    raw = extract_placements(sample_size=50000)
     clean = transform_placements(raw)
 
     errors, warnings = validate_placements(clean)
